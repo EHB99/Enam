@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Enamul Hoque Bhuiyan, Ph.D. — Research Scientist & MRI Physicist. Quantitative MRI, motion correction, AI-driven biomarker discovery, computational biophysics." />
+  <title>Enamul Hoque Bhuiyan, Ph.D. | Research Scientist & MRI Physicist</title>
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --card:#111827;
+      --muted:#9ca3af;
+      --text:#e5e7eb;
+      --accent:#60a5fa;
+      --accent2:#34d399;
+      --border:rgba(255,255,255,0.08);
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius:18px;
+      --max: 1050px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(96,165,250,.25), transparent 55%),
+                  radial-gradient(1000px 600px at 90% 0%, rgba(52,211,153,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,25,0.72);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; flex-direction:column; gap:2px}
+    .brand b{font-size:15px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .navlinks{display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
+    .navlinks a{font-size:13px; color:var(--text); opacity:.9}
+    .navlinks a:hover{opacity:1}
+    .pill{
+      font-size:12px; padding:7px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color:var(--text);
+    }
+
+    .hero{
+      padding:44px 0 18px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      .nav{flex-direction:column; align-items:flex-start}
+      .navlinks{justify-content:flex-start}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px 18px;
+    }
+    .hero h1{margin:0 0 8px; font-size:34px; letter-spacing:.2px}
+    .subtitle{margin:0 0 12px; color:var(--muted)}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+    .chip{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--text);
+    }
+    .kpi{
+      display:grid; gap:10px;
+      grid-template-columns: 1fr;
+    }
+    .kpi .row{
+      display:flex; justify-content:space-between; gap:12px; align-items:baseline;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,0.18);
+      padding:10px 12px;
+      border-radius:14px;
+    }
+    .kpi .row b{font-size:13px}
+    .kpi .row span{font-size:12px; color:var(--muted)}
+    .section{margin-top:18px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+
+    ul{margin:10px 0 0 18px; padding:0}
+    li{margin:6px 0}
+    .muted{color:var(--muted)}
+    .mono{font-family:var(--mono)}
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      border-radius: 999px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-size:13px;
+      text-decoration:none;
+    }
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(96,165,250,.25), rgba(52,211,153,.18));
+      border-color: rgba(96,165,250,.35);
+    }
+    .btn:hover{filter:brightness(1.06); text-decoration:none}
+    .pub{
+      border:1px solid var(--border);
+      background: rgba(0,0,0,0.18);
+      padding:12px 12px;
+      border-radius: 14px;
+      margin-top:10px;
+    }
+    .pub b{display:block; font-size:13px; margin-bottom:2px}
+    .pub span{font-size:12px; color:var(--muted)}
+    footer{
+      margin-top:22px;
+      padding-top:14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size:12px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .small{font-size:12px}
+    .tag{color:var(--accent2); font-family:var(--mono); font-size:12px}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <b>Enamul Hoque Bhuiyan, Ph.D.</b>
+      <span>Research Scientist & MRI Physicist — Candidate for Assistant Professor</span>
+    </div>
+    <nav class="navlinks" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#appointments">Appointments</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#skills">Skills</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="top">
+    <div class="card">
+      <h1>Enamul Hoque Bhuiyan, Ph.D.</h1>
+      <p class="subtitle">
+        Research Scientist & MRI Physicist at the Center for Magnetic Resonance Research (CMRR), University of Illinois Chicago.
+      </p>
+      <p class="muted small">
+        Focus: quantitative MRI, motion correction, MRI hardware/signal modeling, computational biophysics, and AI-driven biomarker discovery.
+      </p>
+
+      <div class="chips" aria-label="Highlights">
+        <span class="chip">Quantitative MRI</span>
+        <span class="chip">Diffusion & Elastography</span>
+        <span class="chip">MRI Motion Correction</span>
+        <span class="chip">Physics-informed Modeling</span>
+        <span class="chip">Explainable AI</span>
+        <span class="chip">Radiogenomics</span>
+      </div>
+
+      <div class="btnrow">
+        <!-- Replace # with your real links -->
+        <a class="btn primary" href="#" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="#publications">Selected publications</a>
+      </div>
+
+      <p class="muted small" style="margin-top:14px">
+        Tagline: <span class="tag">AI for Biomedical Imaging • Computational Biophysics • AI for Health</span>
+      </p>
+    </div>
+
+    <aside class="card">
+      <div class="kpi" aria-label="Quick facts">
+        <div class="row"><b>Affiliation</b><span>CMRR, UIC</span></div>
+        <div class="row"><b>Email</b><span class="mono">bhuiyan@uic.edu</span></div>
+        <div class="row"><b>Phone</b><span class="mono">+1 (203) 214 6948</span></div>
+        <div class="row"><b>Location</b><span>Chicago, IL</span></div>
+      </div>
+
+      <div class="section" style="margin-top:14px">
+        <h2 id="contact">Contact</h2>
+        <p class="muted small" style="margin:0">
+          For collaborations, speaking, or faculty opportunities, please email:
+          <a href="mailto:bhuiyan@uic.edu">bhuiyan@uic.edu</a>
+        </p>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section" id="about">
+    <div class="card">
+      <h2>About</h2>
+      <p class="muted">
+        Interdisciplinary MRI physicist and biomedical engineer integrating electromagnetic modeling, system-level engineering,
+        and AI-based analysis to advance ultra-fast and quantitative MRI. My work spans diffusion biophysics, multi-omics,
+        explainable AI, and reproducible biomarker development for translational imaging and population health.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="research">
+    <div class="grid">
+      <div class="card">
+        <h2>Research interests</h2>
+        <ul class="muted">
+          <li>MRI hardware and signal modeling; quantitative imaging and motion correction</li>
+          <li>Computational biophysics and multi-omics integration</li>
+          <li>AI-driven biomarker discovery; radiogenomics; explainable AI</li>
+          <li>Causal inference for harmonization across field strengths and sites</li>
+          <li>Population-level imaging analytics and One Health modeling</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Interdisciplinary focus areas</h2>
+        <ul class="muted">
+          <li><b>Computational Biophysics & Multi-Omics</b>: physics-informed modeling of tissue microstructure and pathways</li>
+          <li><b>AI-Driven Imaging & Radiogenomics</b>: deep learning + XAI for oncology, pain, neurodegeneration</li>
+          <li><b>Biomedical Engineering & Functional Imaging</b>: adaptive hardware, diffusion, FEA/MRE biomechanics</li>
+          <li><b>Public Health Analytics</b>: causal harmonization and risk prediction for population outcomes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="appointments">
+    <div class="card">
+      <h2>Academic & research appointments</h2>
+      <ul class="muted">
+        <li><b>University of Illinois Chicago</b> — Research Scientist, CMRR (2023–Present)</li>
+        <li><b>Icahn School of Medicine at Mount Sinai</b> — Postdoctoral Fellow (2020–2023)</li>
+        <li><b>Weill Cornell Medicine</b> — Postdoctoral Associate (Aug–Nov 2020)</li>
+        <li><b>Yale University</b> — Postdoctoral Associate, MRI Physics (2018–2020)</li>
+        <li><b>Jagannath University</b> — Assistant/Associate Professor (2011–2018)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="publications">
+    <div class="card">
+      <h2>Selected publications</h2>
+
+      <div class="pub">
+        <b>Multiparametric MRI for diagnosing clinically significant portal hypertension and predicting liver decompensation</b>
+        <span>Liver International, 2025</span>
+      </div>
+
+      <div class="pub">
+        <b>Classification of glioma grade and Ki-67 prediction in MRI data: A SHAP-driven interpretation</b>
+        <span>Computerized Medical Imaging and Graphics, 2025</span>
+      </div>
+
+      <div class="pub">
+        <b>Monitoring head movement inside an MR scanner using voltages induced in coils by time-varying gradients</b>
+        <span>IEEE Access, 2023</span>
+      </div>
+
+      <div class="pub">
+        <b>Magnetic resonance elastography for noninvasive detection of liver fibrosis: added value of 3D acquisition</b>
+        <span>Abdominal Radiology, 2023</span>
+      </div>
+
+      <div class="pub">
+        <b>Feasibility of diffusion weighting with a local inside-out nonlinear gradient coil for prostate MRI</b>
+        <span>Medical Physics, 2021</span>
+      </div>
+
+      <p class="muted small" style="margin-top:12px">
+        Add full publication list and links (DOI/Scholar) as needed.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="teaching">
+    <div class="card">
+      <h2>Teaching</h2>
+      <ul class="muted">
+        <li>Courses taught: Medical Physics, Biomedical Instrumentation, Electromagnetism, Solid State Physics, MRI Principles, Electronics/Signal Processing</li>
+        <li>Mentorship: supervised graduate theses and undergraduate research projects (Bangladesh, UK, USA)</li>
+        <li>Teaching philosophy: experiential learning emphasizing conceptual understanding and translational application</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="service">
+    <div class="grid">
+      <div class="card">
+        <h2>Professional service</h2>
+        <ul class="muted">
+          <li>Reviewer: JMRI, IEEE Access, IEEE T-IM, Medical Physics, PLOS ONE, EJR, Abdominal Radiology, BSPC</li>
+          <li>Abstract reviewer: ISMRM Annual Meeting (2020, 2022, 2025)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Memberships</h2>
+        <ul class="muted">
+          <li>ISMRM</li>
+          <li>Institute of Physics (IOP)</li>
+          <li>RSNA</li>
+          <li>Bangladesh Physical Society (BPS)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="card">
+      <h2>Technical skills</h2>
+      <ul class="muted">
+        <li><b>Programming:</b> MATLAB (expert), Python (intermediate), C++ (basic)</li>
+        <li><b>MRI:</b> sequence development, RF hardware, quantitative diffusion/elastography pipelines</li>
+        <li><b>AI/ML:</b> reconstruction and biomarker prediction; explainability</li>
+      </ul>
+      <p class="muted small">
+        Tip: You can add a “Projects” section later with screenshots, GitHub links, and short case studies.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <span>© <span id="year"></span> Enamul Hoque Bhuiyan</span>
+    <span>Built for GitHub Pages • Single-file HTML</span>
+  </footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
